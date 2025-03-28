@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import sqlWasm from "sql.js/dist/sql-wasm.js";
 import wasmBinary from "sql.js/dist/sql-wasm.wasm?url";
 
-export default function AuthApp() {
+export default function App() {
   // Estados
   const [db, setDb] = useState(null);
   const [user, setUser] = useState(null);
@@ -121,7 +121,7 @@ export default function AuthApp() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-4">
+    <div className="auth-container">
       <div className="w-full max-w-md mx-auto">
         {user ? (
           <div className="bg-white rounded-lg shadow-md p-8 text-center">
